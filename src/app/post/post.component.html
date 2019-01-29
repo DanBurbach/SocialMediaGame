@@ -1,0 +1,10 @@
+<h1>Post</h1>
+
+<div *ngFor ="let userpost of userposts" (click)="goToDetailPage(userpost)" class="panel panel-default">
+  <div class="panel-body">
+    <h3><em>{{userpost.title}}</em></h3>
+    <!-- <h5><em>{{userpost.content}}</em></h5>
+    <h5><em>{{userpost.category}}</em></h5>
+    <h6><em>{{userpost.id}}</em></h6> -->
+  </div>
+</div>
