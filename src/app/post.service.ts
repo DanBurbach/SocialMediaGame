@@ -1,27 +1,30 @@
 import { Injectable } from '@angular/core';
 import { Userpost } from './userpost.model';
-import { POSTS } from './mock-posts';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
 export class PostService {
-  userposts: FirebaseListObservable<any[]>;
+  posts: FirebaseListObservable<any[]>;
 
   constructor(private database: AngularFireDatabase) {
-    this.userposts = database.list('userposts');
+    this.posts = database.list('appleposts');
   }
 
   getPosts() {
-    return this.userposts;
+    return this.posts;
 
   }
 
+  addPost(newPost: Userpost) {
+    this.posts.push(newPost);
+  }
+
   getPostById(postId: number) {
-    for ( var i = 0; i <= POSTS.length - 1; i ++) {
-      if (POSTS[i].id === postId) {
-        return POSTS[i];
-      }
-    }
+    // for ( var i = 0; i <= POSTS.length - 1; i ++) {
+    //   if (POSTS[i].id === postId) {
+    //     return POSTS[i];
+    //   }
+    // }
   }
 
 }

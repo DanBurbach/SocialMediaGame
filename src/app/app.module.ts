@@ -16,6 +16,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { PostComponent } from './post/post.component';
 import { FeedComponent } from './feed/feed.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
+import { AdminComponent } from './admin/admin.component';
+import { NewpostComponent } from './newpost/newpost.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -30,7 +32,9 @@ export const firebaseConfig = {
     WelcomeComponent,
     PostComponent,
     FeedComponent,
-    PostDetailComponent
+    PostDetailComponent,
+    AdminComponent,
+    NewpostComponent
   ],
   imports: [
       BrowserModule,

@@ -1,0 +1,27 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add New Post to Listing</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Title:</label>
+        <br>
+        <input #newTitle>
+      </div><br>
+
+      <div>
+        <label>Content:</label>
+        <br>
+        <input #newContent>
+      </div><br>
+
+      <div>
+        <label>Category:</label>
+        <br>
+        <textarea #newCategory></textarea>
+      </div>
+      <button (click)="submitForm(newTitle.value, newContent.value, newCategory.value); newTitle.value=''; newContent.value=''; newCategory.value=''">Add</button>
+    </div>
+  </div>
+</div>

@@ -7,6 +7,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { PostComponent } from './post/post.component';
 import { FeedComponent } from './feed/feed.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
+import { NewpostComponent } from './newpost/newpost.component';
 
 const appRoutes: Routes = [
   {
@@ -24,6 +25,10 @@ const appRoutes: Routes = [
   {
     path: 'userposts/:id',
     component: PostDetailComponent
+  },
+  {
+    path: 'newpost',
+    component: NewpostComponent
   }
 ];
 

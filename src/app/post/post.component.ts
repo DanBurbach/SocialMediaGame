@@ -12,15 +12,15 @@ import { FirebaseListObservable } from 'angularfire2/database';
 })
 
 export class PostComponent implements OnInit {
-  userposts: FirebaseListObservable<any[]>;
+  listposts: FirebaseListObservable<any[]>;
 
   constructor(private router: Router, private postService: PostService) {}
 
   ngOnInit(){
-    this.userposts = this.postService.getPosts();
+    this.listposts = this.postService.getPosts();
   }
 
   goToDetailPage(clickedPost: Userpost){
-    this.router.navigate(['userposts', clickedPost.id]);
+    // this.router.navigate(['userposts', clickedPost.id]);
   };
 }
