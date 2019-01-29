@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Userpost } from '../userpost.model';
 import { Router } from '@angular/router';
 import { PostService } from '../post.service';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-post',
@@ -11,7 +12,7 @@ import { PostService } from '../post.service';
 })
 
 export class PostComponent implements OnInit {
-  userposts: Userpost[];
+  userposts: FirebaseListObservable<any[]>;
 
   constructor(private router: Router, private postService: PostService) {}
 

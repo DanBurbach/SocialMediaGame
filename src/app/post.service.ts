@@ -5,12 +5,15 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 
 @Injectable()
 export class PostService {
-  posts: FirebaseListObservable<any[]>;
+  userposts: FirebaseListObservable<any[]>;
 
-  constructor(private database: AngularFireDatabase) { }
+  constructor(private database: AngularFireDatabase) {
+    this.userposts = database.list('userposts');
+  }
 
   getPosts() {
-    return POSTS;
+    return this.userposts;
+
   }
 
   getPostById(postId: number) {
