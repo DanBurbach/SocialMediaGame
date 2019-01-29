@@ -17,7 +17,6 @@ export class PostComponent implements OnInit {
 
   ngOnInit(){
     this.userposts = this.postService.getPosts();
-    // this.posts = this.postService.getPosts();
   }
 
   goToDetailPage(clickedPost: Userpost){
