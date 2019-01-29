@@ -1,0 +1,22 @@
+{ "posts":[{
+  "title": "Cat Marries Pig",
+  "content": "Guess what, you guessed right! It happened again, another cat in Sussex has married a pig of 12 years its senior!",
+  "category": "Odds 'n Ends",
+  "id": "1"
+  },{
+  "title": "Nothing new, just creative",
+  "content": "An interviewee just commented that while she is extremely creative, it takes several cups of coffee and a shot of bourbon to continue. News at 11.",
+  "category": "Local News",
+  "id": "2"
+  },{
+  "title": "Sportsball on the rise",
+  "content": "To further the explosion of sportsball, the team the 'Mad Hatters' has included dodge ball in their competitive play",
+  "category": "Sports",
+  "id": "3"
+  },{
+  "title": "Shortsball on the rise",
+  "content": "To further the explosion of sportsball, the team the 'Mad Hatters' has included dodge ball in their competitive play",
+  "category": "Sports",
+  "id": "4"
+  }]
+}

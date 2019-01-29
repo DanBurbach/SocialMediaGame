@@ -6,6 +6,9 @@ import { routing } from './app.routing';
 
 // module imports
 import { NgModule } from '@angular/core';
+import { masterFirebaseConfig } from './api-keys';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 // declarations here
 import { AppComponent } from './app.component';
@@ -14,6 +17,12 @@ import { PostComponent } from './post/post.component';
 import { FeedComponent } from './feed/feed.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 
+export const firebaseConfig = {
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket
+};
 
 @NgModule({
   declarations: [
@@ -27,7 +36,9 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
       BrowserModule,
       FormsModule,
       HttpModule,
-      routing
+      routing,
+      AngularFireModule.initializeApp(firebaseConfig),
+      AngularFireDatabaseModule
     ],
   providers: [],
   bootstrap: [AppComponent]
