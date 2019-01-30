@@ -27,7 +27,12 @@ export class PostDetailComponent implements OnInit {
       this.postId = urlParameters['id'];
     });
     this.postToDisplay = this.postService.getPostById(this.postId);
-    console.log(this.postToDisplay)
+    // this.postService.getPostById(this.postId).subscribe((userposts) => {
+    // // this.postToDisplay = userposts;
+    //   console.log("userposts", userposts);
+      // console.log(this.postToDisplay);
+    });
+    // console.log(this.postToDisplay)
   }
 
 }

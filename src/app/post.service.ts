@@ -7,7 +7,7 @@ export class PostService {
   posts: FirebaseListObservable<any[]>;
 
   constructor(private database: AngularFireDatabase) {
-    this.posts = database.list('appleposts');
+    this.posts = database.list('userposts');
   }
 
   getPosts() {
@@ -20,7 +20,8 @@ export class PostService {
   }
 
   getPostById(postId: string) {
-    return this.database.object('posts/' + postId);
+    console.log(postId)
+    return this.database.object('userposts/' + postId);
     // for ( var i = 0; i <= POSTS.length - 1; i ++) {
     //   if (POSTS[i].id === postId) {
     //     return POSTS[i];
