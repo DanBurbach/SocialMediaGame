@@ -29,4 +29,11 @@ export class PostService {
     // }
   }
 
+  updatePost(localUpdatedPost){
+    var postEntryInFirebase = this.getPostById(localUpdatedPost.$key);
+    postEntryInFirebase.update({title: localUpdatedPost.title,
+                                content: localUpdatedPost.content,
+                                category: localUpdatedPost.category});
+  }
+
 }
