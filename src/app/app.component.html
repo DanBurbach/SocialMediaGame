@@ -8,6 +8,13 @@
       <li><a routerLink="newpost">New Post</a></li><br>
       <li><a routerLink="post">POST, no really.. post.</a></li><br>
       <li><a routerLink="feed">Feed me!!!!</a></li><br>
+      <li *ngIf="isLoggedIn">
+        <a>{{userName}}</a>
+        <a (click)="logout()">Log out</a>
+      </li>
+      <li *ngIf ="!isLoggedIn">
+        <a (click)="login()">Log in</a>
+      </li>
     </ul>
   </div>
 </nav>

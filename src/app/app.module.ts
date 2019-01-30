@@ -9,6 +9,7 @@ import { NgModule } from '@angular/core';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 // declarations here
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { FeedComponent } from './feed/feed.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { NewpostComponent } from './newpost/newpost.component';
 import { EditPostComponent } from './edit-post/edit-post.component';
+import { UserPhotosListComponent } from './user-photos-list/user-photos-list.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -34,7 +36,8 @@ export const firebaseConfig = {
     FeedComponent,
     PostDetailComponent,
     NewpostComponent,
-    EditPostComponent
+    EditPostComponent,
+    UserPhotosListComponent
   ],
   imports: [
       BrowserModule,
@@ -42,7 +45,8 @@ export const firebaseConfig = {
       HttpModule,
       routing,
       AngularFireModule.initializeApp(firebaseConfig),
-      AngularFireDatabaseModule
+      AngularFireDatabaseModule,
+      AngularFireAuthModule
     ],
   providers: [],
   bootstrap: [AppComponent]
