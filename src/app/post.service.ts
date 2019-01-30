@@ -19,7 +19,8 @@ export class PostService {
     this.posts.push(newPost);
   }
 
-  getPostById(postId: number) {
+  getPostById(postId: string) {
+    return this.database.object('posts/' + postId);
     // for ( var i = 0; i <= POSTS.length - 1; i ++) {
     //   if (POSTS[i].id === postId) {
     //     return POSTS[i];

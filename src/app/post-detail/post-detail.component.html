@@ -1,4 +1,2 @@
 <h2>This album has id number: {{postId}}</h2>
-<h4>{{postToDisplay.title}}</h4>
-<h4>{{postToDisplay.content}}</h4>
-<h4>{{postToDisplay.category}}</h4>
+ <h3>{{(postToDisplay | async)?.title}}</h3>
