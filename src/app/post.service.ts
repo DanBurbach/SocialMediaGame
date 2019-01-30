@@ -12,7 +12,6 @@ export class PostService {
 
   getPosts() {
     return this.posts;
-
   }
 
   addPost(newPost: Userpost) {
@@ -20,13 +19,7 @@ export class PostService {
   }
 
   getPostById(postId: string) {
-    console.log(postId)
     return this.database.object('userposts/' + postId);
-    // for ( var i = 0; i <= POSTS.length - 1; i ++) {
-    //   if (POSTS[i].id === postId) {
-    //     return POSTS[i];
-    //   }
-    // }
   }
 
   updatePost(localUpdatedPost){
@@ -34,6 +27,11 @@ export class PostService {
     postEntryInFirebase.update({title: localUpdatedPost.title,
                                 content: localUpdatedPost.content,
                                 category: localUpdatedPost.category});
+  }
+
+  deletePost(localPostToDelete){
+    var postEntryInFirebase = this.getPostById(localPostToDelete.$key);
+    postEntryInFirebase.remove();
   }
 
 }

@@ -5,7 +5,7 @@ import { PostService } from '../post.service';
 @Component({
   selector: 'app-edit-post',
   templateUrl: './edit-post.component.html',
-  styleUrls: ['./edit-post.component.css']
+  styleUrls: ['./edit-post.component.css'],
   providers: [PostService]
 })
 export class EditPostComponent implements OnInit {
@@ -20,4 +20,9 @@ export class EditPostComponent implements OnInit {
     this.postService.updatePost(postToUpdate);
   }
 
+  beginDeletingPost(postToDelete){
+    if(confirm("Are you sure you want to delete this item from the inventory?")){
+      this.postService.deletePost(postToDelete);
+    }
+  }
 }
