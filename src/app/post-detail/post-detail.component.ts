@@ -31,8 +31,6 @@ export class PostDetailComponent implements OnInit {
     // // this.postToDisplay = userposts;
     //   console.log("userposts", userposts);
       // console.log(this.postToDisplay);
-    });
+    };
     // console.log(this.postToDisplay)
   }
-
-}
