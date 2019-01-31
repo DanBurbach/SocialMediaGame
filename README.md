@@ -31,3 +31,7 @@ Forum Ideas:
 https://dribbble.com/shots/5528888-Redesign-Dh
 https://dribbble.com/shots/5542874-Redesign-Dh-Post
 https://www.designernews.co/
+
+How to upload files to Firebase Storage with javascript:
+https://time2hack.com/2017/10/upload-files-to-firebase-storage-with-javascript/
+https://time2hack.github.io/movie-db/public/#/login
