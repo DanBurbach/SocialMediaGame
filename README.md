@@ -37,3 +37,15 @@ https://time2hack.com/2017/10/upload-files-to-firebase-storage-with-javascript/
 https://time2hack.github.io/movie-db/public/#/login
 
 https://firebase.google.com/docs/storage/web/upload-files
+
+A news api (for the text feed):
+https://aylien.com/news-api/
+
+Imgur API (for the pic feed):
+https://api.imgur.com/
+Unsplash Developers API (pic feed):
+https://unsplash.com/developers
+
+
+YouTube Data API (video feed):
+https://developers.google.com/youtube/v3/
