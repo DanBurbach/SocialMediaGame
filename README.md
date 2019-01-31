@@ -35,3 +35,5 @@ https://www.designernews.co/
 How to upload files to Firebase Storage with javascript:
 https://time2hack.com/2017/10/upload-files-to-firebase-storage-with-javascript/
 https://time2hack.github.io/movie-db/public/#/login
+
+https://firebase.google.com/docs/storage/web/upload-files
